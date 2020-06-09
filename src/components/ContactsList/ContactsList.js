@@ -13,7 +13,8 @@ const ContactsList = ({
   onDelete,
   children,
 }) => {
-  const randerContacts = !filter ? contacts : filteredContacts;
+  const randerContacts =
+    !filter || filteredContacts.length === 0 ? contacts : filteredContacts;
 
   return (
     <Fragment>
